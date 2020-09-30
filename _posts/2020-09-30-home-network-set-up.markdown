@@ -48,7 +48,7 @@ NAS目前对我来主要有两个用处，一是挂PT存放高清电影🎬，�
 
 如果你是个高清电影爱好者，喜欢自己下1080p或者4K的电影看，有大电视的话，Apple TV 4K绝对是最佳伴侣。
 
-![Apple TV 4K](assets/apple-tv-4k.jpeg)
+![Apple TV 4K](/assets/apple-tv-4k.jpeg)
 
 在Apple TV 4K上使用Infuse播放NAS里的电影，整个体验非常舒服顺畅，Infuse能很好的呈现你的收藏，封面，简介，字幕。
 
