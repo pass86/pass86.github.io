@@ -54,7 +54,7 @@ NAS目前对我来主要有两个用处，一是挂PT存放高清电影🎬，�
 
 至于电视我选择了Sony A9G OLED，画面效果没有让我失望，看4K电影，有身临其境的感觉。
 
-![Sony A9G](/assets/sony-a9g.webp)
+![Sony A9G](/assets/sony-a9g.png)
 
 使用OpenWrt的好处之一就是科学上网我可以在路由器上做，我的方案使用了：SSH tunnel、Squid、Proxy auto-config、Auto Proxy Discovery。
 
