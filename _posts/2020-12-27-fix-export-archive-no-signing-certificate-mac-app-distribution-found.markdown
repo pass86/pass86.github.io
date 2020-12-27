@@ -9,7 +9,7 @@ title: 'Fix exportArchive: No signing certificate "Mac App Distribution" found'
 
 那为什么会有这些Static Library在Xcode工程的Copy Bundle Reources里呢？链接这些库使用的是XUPorter插件，经过Review后发现代码里有两份XUPorter，一份是之前加入的，另一份是新加入SDK里的，被加入了额外的namespace所以没有编译错误。
 
-而之前的XUPorter会在OnPostProcessBuild里查找Assets目录下所有.projmods文件加入XCProject使用。问题就出在这里，新加入的SDK里也有很多.projmods文件，所以被误加入了XCProject，导致生成出来的Xcode工程不符合预期，然后导出的行为也就不符合预期。
+而之前的XUPorter会在OnPostProcessBuild里查找Assets目录下所有.projmods文件加入XCProject使用。问题就出在这里，新加入的SDK里也有很多.projmods文件，所以被误加入了XCProject，导致生成出来的Xcode工程不符合预期，然后Xcode导出的行为也就不符合预期。
 
 解决方法就是把之前的XUPorter搜索.projmods的目录限定到更明确的Mods目录。跑整个构建流程，没有问题了。
 
