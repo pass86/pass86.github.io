@@ -63,7 +63,7 @@ lunch aosp_walleye-userdebug
 
 m
 
-* `刷机`，需要在Pixel 2里设置OEM unlocking开启
+* `刷机`，在Pixel 2设置里开启USB debugging和OEM unlocking，Pixel 2通过USB连接到PC
 
 adb reboot bootloader
 
