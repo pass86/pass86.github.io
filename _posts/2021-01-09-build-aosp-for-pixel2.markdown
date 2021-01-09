@@ -35,7 +35,7 @@ export PATH=~/bin:$PATH
 
 在中国大陆需要设置http_proxy和https_proxy，原因应该都懂的，AOSP推荐用bash，设置好环境变量后，需要重开一个bash
 
-* `创建代码目录`，可用空间官方推荐需要250GB，下载后代码库70GB左右，构建完成后占用170GB左右，
+* `创建代码目录`，可用空间官方推荐需要250GB，下载后代码库70GB左右，构建完成后占用170GB左右
 
 mkdir ~/aosp
 
