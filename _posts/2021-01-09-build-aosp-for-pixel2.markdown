@@ -41,7 +41,7 @@ mkdir ~/aosp
 
 cd ~/aosp
 
-* `设置代码URL和版本`，版本可以在这里找到[https://source.android.com/setup/start/build-numbers](https://source.android.com/setup/start/build-numbers)
+* `设置代码URL和版本`，版本可以在这里找到，[https://source.android.com/setup/start/build-numbers](https://source.android.com/setup/start/build-numbers)
 
 repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r41
 
