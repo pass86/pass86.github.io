@@ -19,4 +19,8 @@ title: Fix xcodebuild archive Provisioning profile error on Apple M1
 
 所以其实不用买Membership也是可以解决问题，我知道在x86 Mac上是不用在Devices里加UDID，但鉴于M1是ARM架构可以运行iOS的App的，我以为这是个新的机制要求。这都是些黑盒的东西，xcodebuild的文档对`-destination`也没有更详细的说明，而且通过GitHub Actions运行报错的又是Hardware UUID。
 
-太多解释不清楚的点。我目前能Make it work就达到我的目的了。
+推测在不加`-destination`参数时，xcodebuild默认会寻找一个当前支持的设备，iOS App在x86 Mac下是不支持的，所以没有设置当前设备，而在M1 Mac下则支持有了选择。
+
+然而为什么Github Actions调用时取到的是Hardware UUID，这个就难以理解了。
+
+总之，我目前能Make it work就达到我的目的了。
