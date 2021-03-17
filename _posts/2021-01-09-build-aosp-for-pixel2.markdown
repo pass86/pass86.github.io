@@ -25,6 +25,8 @@ sudo apt-get install libncurses5
 
 * `下载代码管理工具repo`，这是一个python脚本，如果你的默认python不是python3的话，需要打开文件把第一行的python改成python3
 
+mkdir -p ~/bin
+
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 
 chmod a+x ~/bin/repo
