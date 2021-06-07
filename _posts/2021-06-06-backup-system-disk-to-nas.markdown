@@ -19,7 +19,7 @@ title: Backup System Disk to NAS
 
 ```sh
 mkdir /mnt/backup
-mount -t cifs //192.168.1.100/backup /mnt/backup -o username=foo,password=bar
+mount -t cifs //192.168.1.100/backup /mnt/backup -o username=foo
 ls /mnt/backup
 ```
 
