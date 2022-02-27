@@ -159,7 +159,7 @@ vim /etc/hosts
 
 ```sh
 pacman -S grub efibootmgr intel-ucode
-grub-install /dev/nvme0n1
+grub-install /dev/nvme0n1p1
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
