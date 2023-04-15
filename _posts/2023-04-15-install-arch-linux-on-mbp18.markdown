@@ -25,7 +25,7 @@ sudo dd if=archlinux-t2-2023.03.23-t2-x86_64.iso of=/dev/rdisk2 bs=1m
 ```
 
 * `关闭文件保险箱`
- 
+
 系统设置=>隐私与安全性=>文件保险箱=>关闭...
 
 * `磁盘分区`
@@ -82,7 +82,7 @@ export HTTPS_PROXY=http://192.168.1.1:8080
 ```
 
 * `安装基础包`
- 
+
 又一个坑，不要使用t2strap那种方式，我最开始使用这种方式，结果/mnt/etc/pacman.conf直接被覆盖了，arch-chroot后，连个vim都装不上。
 
 这里也要安装上python，文档里并没有说，后面运行firmware.sh时会用到python。
@@ -150,7 +150,7 @@ vim /etc/hosts
 ```
 
 * `生成initial RAM disk`
- 
+
 ```sh
 # 增加apple-bce到MODULES里
 vim /etc/mkinitcpio.conf
@@ -158,7 +158,7 @@ mkinitcpio -P
 ```
 
 * `安装启动器`
- 
+
 ```sh
 # GRUB_CMDLINE_LINUX里增加intel_iommu=on iommu=pt pcie_ports=compat
 vim /etc/default/grub
@@ -210,7 +210,7 @@ vim /etc/resolv.conf
 ```
 
 * `使用Wi-Fi和蓝牙的固件`
- 
+
 ```sh
 umount /dev/nvme0n1p1
 mkdir /tmp/apple-wifi-efi
@@ -221,7 +221,7 @@ journalctl -k --grep=brcmfmac
 ```
 
 * `设置无线网络`
- 
+
 ```sh
 pacman -S networkmanager iw wpa_supplicant
 systemctl enable NetworkManager
@@ -238,5 +238,5 @@ acpi
 ```
 
 * `运行效果`
- 
+
 ![MBP18-ArchLinux](/assets/mbp18-archlinux.jpeg)
