@@ -46,7 +46,7 @@ ls /Volumes/EFI
 
 * `从U盘启动`
 
-这里也有个坑，U盘要用USB Type-A到Type-C的转接头，直接插在MBP上，试了插在贝尔金的Dock和绿联的Hub上都会导致启动卡死，后面用了Google Pixel 2包装盒里带的转接头才顺利进入U盘系统。
+这里有个坑，U盘要用USB Type-A到Type-C的转接头，直接插在MBP上，试了插在贝尔金的Dock和绿联的Hub上都会导致启动卡死，后面用了Google Pixel 2包装盒里带的转接头才顺利进入U盘系统。
 
 安装时需要联网下载软件包，所以要连接有线网络，我用的是绿联那个带网线接口的Hub。
 
@@ -83,7 +83,7 @@ export HTTPS_PROXY=http://192.168.1.1:8080
 
 * `安装基础包`
  
-不要使用t2strap那种方式，我最开始使用这种方式，结果/mnt/etc/pacman.conf直接被覆盖了，arch-chroot后，连个vim都装不上。
+又一个坑，不要使用t2strap那种方式，我最开始使用这种方式，结果/mnt/etc/pacman.conf直接被覆盖了，arch-chroot后，连个vim都装不上。
 
 这里也要安装上python，文档里并没有说，后面运行firmware.sh时会用到python。
 
@@ -188,7 +188,7 @@ reboot
 * `设置有线网络`
 
 ```sh
-sudo vim /etc/systemd/network/20-wired.network
+vim /etc/systemd/network/20-wired.network
 ```
 
 ```
@@ -200,8 +200,8 @@ DHCP=yes
 ```
 
 ```sh
-sudo systemctl enable systemd-networkd
-sudo systemctl start systemd-networkd
+systemctl enable systemd-networkd
+systemctl start systemd-networkd
 ```
 
 ```sh
@@ -212,9 +212,9 @@ vim /etc/resolv.conf
 * `使用Wi-Fi和蓝牙的固件`
  
 ```sh
-sudo umount /dev/nvme0n1p1
-sudo mkdir /tmp/apple-wifi-efi
-sudo mount /dev/nvme0n1p1 /tmp/apple-wifi-efi
+umount /dev/nvme0n1p1
+mkdir /tmp/apple-wifi-efi
+mount /dev/nvme0n1p1 /tmp/apple-wifi-efi
 bash /tmp/apple-wifi-efi/firmware.sh
 # 检查日志
 journalctl -k --grep=brcmfmac
